@@ -90,3 +90,4 @@ metrics.f1_score(newsgroups_test.target, pred, average='macro')
 print('\nVectors test:\n', vectors_test)
 print('\nPred:\n', pred)
 print('\nMetrics f1score:\n', metrics.f1_score(newsgroups_test.target, pred, average='macro'))
+
