@@ -1,6 +1,7 @@
 # sklearn-text-classification
  
 Sklearn text classification using the 20newsgroups dataset 
+
 According to https://scikit-learn.org/0.19/datasets/twenty_newsgroups.html
 
 Algorithm: Multinomial Naive Bayes
