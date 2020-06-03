@@ -5,13 +5,12 @@ Created on Wed Jun  3 18:32:51 2020
 @author: Machachane
 """
 
-
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import metrics
 
-cats = ['rec.motorcycles', 'rec.sport.baseball']
+cats = ['rec.motorcycles', 'rec.sport.baseball', 'sci.space']
 newsgroups_train = fetch_20newsgroups(subset='train', categories=cats)
 
 
@@ -22,6 +21,7 @@ print('\nShape filenames:\n',newsgroups_train.filenames.shape)
 print('\nShape target:\n',newsgroups_train.target.shape)
 print('\nTarget:\n',newsgroups_train.target[:10])
 
+print('\nConverting text to vectors -----------------------------------------------------------\n')
 
 #Converting text to vectors
 
@@ -33,6 +33,7 @@ vectors = vectorizer.fit_transform(newsgroups_train.data)
 print('\nVectors shape:\n', vectors.shape)
 print('\nVectors nonzero:\n', vectors.nnz/float(vectors.shape[0]))
 
+print('\nFiltering text for more realistic training -------------------------------------------\n')
 
 #Filtering text for more realistic training 
 
@@ -62,7 +63,7 @@ def show_top10(classifier, vectorizer, categories):
         
 print('\nShow top10:\n', show_top10(clf, vectorizer, newsgroups_train.target_names))
 
-print('\n-------------------------------------------------------------------------------------\n')
+print('\n------------------------------------------------------------------------------------\n')
 
 newsgroups_test = fetch_20newsgroups(subset='test', remove=('headers', 'footers', 'quotes'), categories=categories)
 
