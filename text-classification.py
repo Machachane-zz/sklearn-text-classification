@@ -75,7 +75,7 @@ print('\nVectors test:\n', vectors_test)
 print('\nPred:\n', pred)
 print('\nMetrics f1score:\n', metrics.f1_score(pred, newsgroups_test.target, average='macro'))
 
-print('\n-------------------------------------------------------------------------------------\n')
+print('\n------------------------------------------------------------------------------------\n')
 
 
 newsgroups_train = fetch_20newsgroups(subset='train', remove=('headers', 'footers', 'quotes'), categories=categories)
