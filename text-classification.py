@@ -33,6 +33,7 @@ vectors = vectorizer.fit_transform(newsgroups_train.data)
 print('\nVectors shape:\n', vectors.shape)
 print('\nVectors nonzero:\n', vectors.nnz/float(vectors.shape[0]))
 
+
 print('\nFiltering text for more realistic training -------------------------------------------\n')
 
 #Filtering text for more realistic training 
