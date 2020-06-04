@@ -13,7 +13,7 @@ MultinomialNB, alpha,
 Numpy, asarray, get_feature_names(), argsort, coef 
 accuracy, score, filenames, target, shape, 
 classifier, fit, prediction, 
-metrics, f1-score, average
+metrics, f1-score, average, overfit
 
 
 Relevant actions:
