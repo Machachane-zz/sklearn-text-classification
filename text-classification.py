@@ -21,7 +21,7 @@ print('\nShape filenames:\n',newsgroups_train.filenames.shape)
 print('\nShape target:\n',newsgroups_train.target.shape)
 print('\nTarget:\n',newsgroups_train.target[:10])
 
-print('\nConverting text to vectors -----------------------------------------------------------\n')
+print('\nConverting text to vectors --------------------------------------------------------\n')
 
 #Converting text to vectors
 
@@ -34,7 +34,7 @@ print('\nVectors shape:\n', vectors.shape)
 print('\nVectors nonzero:\n', vectors.nnz/float(vectors.shape[0]))
 
 
-print('\nFiltering text for more realistic training -------------------------------------------\n')
+print('\nFiltering text for more realistic training ----------------------------------------\n')
 
 #Filtering text for more realistic training 
 
@@ -51,7 +51,7 @@ print('\nClf fit', clf.fit(vectors, newsgroups_train.target))
 print('\nPred:\n', pred)
 print('\nF1score:\n', metrics.f1_score(newsgroups_test.target, pred, average='macro'))
 
-print('\n-------------------------------------------------------------------------------------\n')
+print('\n-----------------------------------------------------------------------------------\n')
 
 import numpy as np
 
@@ -64,7 +64,7 @@ def show_top10(classifier, vectorizer, categories):
         
 print('\nShow top10:\n', show_top10(clf, vectorizer, newsgroups_train.target_names))
 
-print('\n------------------------------------------------------------------------------------\n')
+print('\n-----------------------------------------------------------------------------------\n')
 
 newsgroups_test = fetch_20newsgroups(subset='test', remove=('headers', 'footers', 'quotes'), categories=categories)
 
@@ -76,7 +76,7 @@ print('\nVectors test:\n', vectors_test)
 print('\nPred:\n', pred)
 print('\nMetrics f1score:\n', metrics.f1_score(pred, newsgroups_test.target, average='macro'))
 
-print('\n------------------------------------------------------------------------------------\n')
+print('\n-----------------------------------------------------------------------------------\n')
 
 
 newsgroups_train = fetch_20newsgroups(subset='train', remove=('headers', 'footers', 'quotes'), categories=categories)
